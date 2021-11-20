@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSS test</title>
+    <style>
+      body {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      input {
+        width: 300px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>反射型Xss攻击Demo</h1>
+    <ul>
+      <li>点击add添加产品</li>
+      <li>在搜索框输入关键字既可进行搜索</li>
+      <li>在搜索框输入&lt;script&gt;alert(1)&lt;script&gt;试试</li>
+      <li>在搜索框输入&lt;script src=http://localhost:8080/xss.js /&gt;试试</li>
+    </ul>
+
+    <hr />
+
+    <div>
+      <input id="search" placeholder="请输入搜索关键字" />
+      <button id="searchBtn">搜索</button>
+    </div>
+
+    <!-- 搜索关键字 -->
+    <h3><!-- SEARCH --></h3>
+
+    <script src="/js"></script>
+  </body>
+</html>

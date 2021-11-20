@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSS test</title>
+    <style>
+      body {
+        width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>存储型Xss攻击Demo - 后端返回JSON前端渲染</h1>
+    <ul>
+      <li>点击add添加产品</li>
+      <li><strong>添加完产品记得刷新</strong></li>
+      <li>在prompt中输入 &lt;script&gt;alert(1)&lt;/script&gt; 试试, 为什么没有弹出 1 呢?</li>
+      <li>在prompt中输入 &lt;img src='x' onerror='alert(1)'/&gt; 试试, 为什么这个又弹出来了呢?</li>
+    </ul>
+
+    <hr />
+
+    <!-- 添加按钮 -->
+    <button id="add">Add</button>
+
+    <!-- 产品列表 -->
+    <ol id="products">
+      <!-- LIST -->
+    </ol>
+
+    <script src="/js"></script>
+  </body>
+</html>
