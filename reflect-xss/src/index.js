@@ -18,7 +18,7 @@ app.get('/search', (req, res) => {
 
 app.get('/js', (_, res) => res.sendFile(buildFilePath('/main.js')));
 
-app.get('/xss.js', (_, res) => res.sendFile(buildFilePath('/xss.js')));
+app.get('/xss', (_, res) => res.sendFile(buildFilePath('/xss.js')));
 
 app.get('/', (_, res) => {
   const data = fs.readFileSync(buildFilePath('/index.html'));
