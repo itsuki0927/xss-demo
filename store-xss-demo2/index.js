@@ -25,6 +25,6 @@ app.post('/products', (req, res) => {
   res.send({ success: true });
 });
 
-app.listen(8080);
+app.listen(3333);
 
-console.log('Listen to 8080');
+console.log('Listen to 3333');
