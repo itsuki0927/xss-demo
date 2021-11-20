@@ -4,7 +4,7 @@ const add = document.getElementById('add');
 add.addEventListener('click', () => postProduct(prompt('输入商品名称')));
 
 async function postProduct(name) {
-  await fetch('http://localhost:8080/products', {
+  await fetch('http://localhost:2222/products', {
     method: 'post',
     body: JSON.stringify({ name }),
     headers: {
@@ -15,7 +15,7 @@ async function postProduct(name) {
 }
 
 async function loadProducts() {
-  const res = await fetch('http://localhost:8080/products');
+  const res = await fetch('http://localhost:2222/products');
   const products = await res.json();
   productsDom.innerHTML = products.map(item => `<li>${item}</li>`).join('');
 }

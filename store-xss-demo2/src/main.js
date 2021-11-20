@@ -4,7 +4,7 @@ const add = document.getElementById('add');
 add.addEventListener('click', () => postProduct(prompt('输入商品名称')));
 
 async function postProduct(name) {
-  await fetch('http://localhost:8080/products', {
+  await fetch('http://localhost:3333/products', {
     method: 'post',
     body: JSON.stringify({ name }),
     headers: {
